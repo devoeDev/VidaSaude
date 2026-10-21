@@ -1,0 +1,262 @@
+
+/*
+  VidaSaúde — Layout Desktop
+  Aplicado a partir de 900px.
+  Mantém o layout original do Figma no celular.
+*/
+
+@media (min-width: 900px) {
+
+  :root {
+    background-color: #fffff6;
+  }
+
+  /* Remover aparência de smartphone */
+
+  .app-stage {
+    display: block;
+    width: 100%;
+    padding: 0;
+    min-height: 100dvh;
+    background: #fffff6;
+  }
+
+  .app-shell {
+    width: 100%;
+    max-width: none;
+    min-height: 100dvh;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  /* LOGIN DESKTOP */
+
+  .login-screen > main {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 46%)
+      minmax(0, 54%);
+    width: 100%;
+    min-height: 100dvh;
+    height: auto;
+  }
+
+  /* Área verde, lado esquerdo */
+
+  .login-hero {
+    min-height: 100dvh;
+    padding: 56px;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-hero > div:first-child {
+    width: 112px;
+    height: 112px;
+    border-radius: 24px;
+  }
+
+  .login-hero > div:first-child svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .login-hero > h1 {
+    margin-top: 26px;
+    font-size: clamp(36px, 3.2vw, 50px);
+  }
+
+  .login-hero > p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  /* Formulário, lado direito */
+
+  .login-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 100dvh;
+    padding: 64px clamp(40px, 7vw, 120px);
+
+    border-radius: 0;
+    background: #fffff6;
+  }
+
+  .login-panel > h2,
+  .login-panel > form,
+  .login-panel > button {
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .login-panel > h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .login-label {
+    font-size: 16px;
+  }
+
+  .login-input {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .login-panel > button {
+    margin-top: 32px;
+  }
+
+  /* CADASTRO DESKTOP */
+
+  .register-screen .register-layout {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 42%)
+      minmax(0, 58%);
+
+    width: 100%;
+    min-height: 100dvh;
+  }
+
+  /* Lado esquerdo do cadastro */
+
+  .register-screen .register-hero {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100dvh;
+    min-height: 620px;
+
+    padding: clamp(40px, 5vw, 85px);
+  }
+
+  .register-screen .register-back {
+    position: absolute;
+    top: 44px;
+    left: clamp(40px, 5vw, 85px);
+    font-size: 17px;
+  }
+
+  .register-screen .register-hero-copy {
+    margin-top: 0;
+    max-width: 460px;
+  }
+
+  .register-screen .register-hero-copy h1 {
+    font-size: clamp(32px, 3vw, 46px);
+    line-height: 1.16;
+  }
+
+  .register-screen .register-hero-copy p {
+    margin: 18px 0 0;
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  /* Lado direito do cadastro */
+
+  .register-screen .register-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100dvh;
+    padding: 48px clamp(38px, 7vw, 116px);
+
+    border-radius: 0;
+    background: #fffff6;
+  }
+
+  .register-screen .register-form {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 540px;
+    margin: 0;
+  }
+
+  .register-screen .register-fields {
+    gap: 17px;
+  }
+
+  .register-screen
+  .register-field label:not(.register-gender-option),
+
+  .register-screen
+  .register-field .register-label,
+
+  .register-screen
+  .register-gender-field legend {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  .register-screen .register-field > input,
+  .register-screen .register-field > select,
+  .register-screen .register-date-grid select,
+  .register-screen .register-other-city input {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .register-screen .register-footer {
+    margin-top: 0;
+    padding-top: 34px;
+  }
+
+  .register-screen .register-submit {
+    min-height: 54px;
+  }
+
+  /* Modais */
+
+  .modal-backdrop {
+    position: fixed;
+  }
+
+  .modal-card {
+    max-width: 440px;
+  }
+
+  /* Tela inicial provisória */
+
+  .app-shell.bg-brand-white > main {
+    width: 100%;
+    min-height: 100dvh;
+  }
+
+  .app-shell.bg-brand-white > main > p {
+    max-width: 540px;
+  }
+}
+
+/* Telas de computador com pouca altura */
+
+@media (min-width: 900px) and (max-height: 650px) {
+  .login-hero,
+  .login-panel {
+    min-height: 650px;
+  }
+
+  .register-screen .register-hero {
+    min-height: 650px;
+  }
+}

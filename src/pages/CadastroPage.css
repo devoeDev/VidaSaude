@@ -1,0 +1,368 @@
+
+/* CADASTRO VIDASAÚDE — FIGMA */
+
+.register-screen {
+  background: #397969;
+  color: #303030;
+}
+
+.register-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+/* CABEÇALHO VERDE */
+
+.register-hero {
+  flex: 0 0 auto;
+  height: clamp(222px, 26svh, 254px);
+  padding: 39px 33px 20px;
+  background: #397969;
+  color: #fffff6;
+}
+
+.register-back {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 3px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #fffff6;
+  font: 700 15px/22px "Nunito", sans-serif;
+  cursor: pointer;
+}
+
+.register-back:hover {
+  opacity: 0.85;
+}
+
+.register-back:focus-visible,
+.register-submit:focus-visible {
+  outline: 3px solid #88e0b9;
+  outline-offset: 4px;
+}
+
+.register-hero-copy {
+  margin-top: 38px;
+}
+
+.register-hero-copy h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.23;
+  font-weight: 900;
+}
+
+.register-hero-copy p {
+  margin: 6px 0 0 11px;
+  color: #e3efe8;
+  font-size: 15px;
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+/* PAINEL DO FORMULÁRIO */
+
+.register-panel {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  border-radius: 20px 20px 0 0;
+  background: #fffff6;
+  padding: 42px 34px 17px;
+}
+
+.register-form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.register-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.register-field {
+  min-width: 0;
+}
+
+/* TÍTULOS DOS CAMPOS */
+
+.register-field label:not(.register-gender-option),
+.register-field .register-label,
+.register-gender-field legend {
+  display: block;
+  margin-bottom: 6px;
+  padding: 0;
+  color: #303030;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 900;
+}
+
+/* INPUTS E SELECTS */
+
+.register-field > input,
+.register-field > select,
+.register-date-grid select,
+.register-other-city input {
+  width: 100%;
+  height: 48px;
+  min-width: 0;
+  border: 1px solid #c8cbc2;
+  border-radius: 10px;
+  padding: 0 13px;
+  outline: none;
+  background: #f6f6ec;
+  color: #303030;
+  font: 600 14px/20px "Nunito", sans-serif;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.register-field input::placeholder {
+  color: #7b7d76;
+  opacity: 1;
+}
+
+.register-field select {
+  appearance: none;
+  padding-right: 35px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23777a76' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.register-field input:focus,
+.register-field select:focus {
+  border-color: #397969;
+  box-shadow: 0 0 0 3px rgb(57 121 105 / 16%);
+}
+
+.register-field .register-invalid {
+  border-color: #af4545;
+}
+
+/* DIA, MÊS E ANO */
+
+.register-date-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.5fr)
+    minmax(0, 0.9fr);
+  gap: 14px;
+}
+
+.register-date-grid select {
+  padding-left: 9px;
+  padding-right: 24px;
+  background-position: right 5px center;
+}
+
+/* ERROS */
+
+.register-error {
+  margin: 5px 0 0;
+  color: #a12f2f;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 17px;
+}
+
+/* SELEÇÃO DE GÊNERO */
+
+.register-gender-field {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.register-gender-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+.register-gender-option {
+  position: relative;
+  display: flex;
+  height: 42px;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  border: 1px solid #c8cbc2;
+  border-radius: 10px;
+  padding: 0 11px;
+  background: #f6f6ec;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register-gender-option input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.register-gender-option:focus-within {
+  outline: 3px solid #88e0b9;
+  outline-offset: 2px;
+}
+
+.register-gender-selected {
+  border-color: #397969;
+  background: #e8f3ec;
+}
+
+.register-radio-circle {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  border: 2px solid #397969;
+  border-radius: 50%;
+}
+
+.register-gender-selected .register-radio-circle {
+  background: #397969;
+  box-shadow: inset 0 0 0 3px #e8f3ec;
+}
+
+.register-password-first {
+  margin-top: 13px;
+}
+
+.register-other-city {
+  margin-top: 10px;
+}
+
+/* BOTÕES E INDICADOR DE ETAPAS */
+
+.register-footer {
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.register-submit {
+  display: flex;
+  width: 100%;
+  min-height: 49px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: #397969;
+  color: #fffff6;
+  font: 900 18px/22px "Nunito", sans-serif;
+  cursor: pointer;
+}
+
+.register-submit:hover {
+  background: #2b6152;
+}
+
+.register-step-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 22px;
+  padding-top: 8px;
+}
+
+.register-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d7d7d9;
+}
+
+.register-dot-active {
+  background: #397969;
+}
+
+/* MENSAGEM DE SUCESSO */
+
+.register-success-icon {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #e8f3ec;
+  color: #397969;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.register-success-title {
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.register-success-description {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #52665d;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 600px) {
+  .register-layout {
+    min-height: 100%;
+  }
+}
+
+@media (max-width: 359px) {
+  .register-hero {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .register-hero-copy h1 {
+    font-size: 20px;
+  }
+
+  .register-panel {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .register-date-grid {
+    gap: 7px;
+  }
+
+  .register-gender-options {
+    gap: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .register-field input,
+  .register-field select {
+    transition: none;
+  }
+}

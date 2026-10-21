@@ -1,0 +1,1235 @@
+
+/* VIDASAÚDE — TELA INICIAL */
+
+.home-screen {
+  --home-green: #397969;
+  --home-cream: #fffff6;
+  --home-text: #303030;
+
+  background: var(--home-cream);
+  color: var(--home-text);
+}
+
+.home-screen button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.home-screen button:focus-visible {
+  outline: 3px solid #23745e;
+  outline-offset: 3px;
+}
+
+.home-app {
+  position: relative;
+  min-height: 100svh;
+  width: 100%;
+}
+
+.home-sidebar {
+  display: none;
+}
+
+.home-main {
+  min-height: 100svh;
+  background: var(--home-cream);
+}
+
+/* ============================= */
+/* CABEÇALHO MOBILE */
+/* ============================= */
+
+.home-hero {
+  position: relative;
+  height: 241px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 47px 26px 26px;
+  background: var(--home-green);
+  color: white;
+}
+
+.home-greeting {
+  min-width: 0;
+}
+
+.home-salutation {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #e3f0e9;
+}
+
+.home-greeting h1 {
+  margin: 0 0 3px;
+  font-size: clamp(24px, 7vw, 30px);
+  line-height: 1.12;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.home-date {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #dce9e2;
+}
+
+.home-avatar {
+  display: flex;
+  flex: 0 0 55px;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: #5a9c80;
+  color: #fff;
+  font-size: 29px;
+  font-weight: 900;
+}
+
+.home-desktop-subtitle {
+  display: none;
+}
+
+/* ============================= */
+/* FUNDO PRINCIPAL */
+/* ============================= */
+
+.home-content {
+  position: relative;
+  margin-top: -6px;
+  min-height: calc(100svh - 235px);
+  padding: 0 22px 133px;
+  background: var(--home-cream);
+  border-radius: 20px 20px 0 0;
+}
+
+/* ============================= */
+/* ÚLTIMAS MEDIÇÕES */
+/* ============================= */
+
+.home-health-card {
+  position: relative;
+  top: -60px;
+  margin-bottom: -60px;
+  padding: 13px 14px 15px;
+  min-height: 150px;
+  border-radius: 18px;
+  background: #fffef9;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 23%);
+}
+
+.home-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.home-card-top h2 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  margin: 0 0 11px;
+}
+
+.home-all-measures {
+  display: none;
+}
+
+.home-vitals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 11px;
+}
+
+.home-vital {
+  display: flex;
+  min-width: 0;
+  min-height: 91px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 7px 2px 6px;
+  text-align: center;
+
+  transition:
+    transform 140ms ease,
+    filter 140ms ease;
+}
+
+.home-vital:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.98);
+}
+
+.home-vital-glicose {
+  background: #e8fcfb;
+  --vital-ink: #50b4c5;
+}
+
+.home-vital-pressao {
+  background: #f3eafe;
+  --vital-ink: #512481;
+}
+
+.home-vital-batimentos {
+  background: #ffeceb;
+  --vital-ink: #77191a;
+}
+
+.home-vital-icon {
+  height: 22px;
+  color: var(--vital-ink);
+}
+
+.home-vital strong {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+}
+
+.home-vital small {
+  display: block;
+  font-size: 10px;
+  line-height: 13px;
+  color: #292929;
+}
+
+.home-vital-status {
+  display: inline-flex;
+  margin-top: 5px;
+  border-radius: 6px;
+  padding: 0 4px;
+  background: #fff1c9;
+  color: #8d270f;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 800;
+}
+
+.home-vital-batimentos .home-vital-status {
+  background: #dafaac;
+  color: #287f19;
+}
+
+.home-demo-caption {
+  display: none;
+}
+
+/* ============================= */
+/* LEMBRETE DE MEDICAMENTO */
+/* ============================= */
+
+.home-dashboard-grid {
+  margin-top: 23px;
+}
+
+.home-primary-column {
+  min-width: 0;
+}
+
+.home-reminder {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 102px;
+  padding: 15px 18px;
+  border: 0;
+  border-radius: 19px;
+  background: #ffda85;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+  text-align: left;
+  color: #282828;
+}
+
+.home-reminder:hover {
+  background: #ffcf67;
+}
+
+.home-reminder-done {
+  background: #daf5db;
+}
+
+.home-reminder-done:hover {
+  background: #c9eaca;
+}
+
+.home-reminder-icon {
+  display: flex;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  background: #ffaf05;
+  color: white;
+}
+
+.home-reminder-done .home-reminder-icon {
+  background: #3d9372;
+}
+
+.home-reminder-content {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.home-reminder-heading {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+}
+
+.home-reminder-content strong {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 900;
+}
+
+.home-reminder-content > span:last-child {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+.home-reminder > svg:last-child {
+  flex: 0 0 auto;
+  color: #747474;
+}
+
+/* ============================= */
+/* CARTÕES DE AÇÕES */
+/* ============================= */
+
+.home-actions {
+  margin-top: 11px;
+}
+
+.home-actions h2 {
+  margin: 0 0 11px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 900;
+}
+
+.home-action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.home-action-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 104px;
+  border: 1px solid #f3f1e8;
+  border-radius: 19px;
+  padding: 17px 18px;
+  background: #fffef9;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 25%);
+  text-align: left;
+  color: #303030;
+
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.home-action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 14%);
+}
+
+.home-action-icon {
+  display: flex;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+}
+
+.home-action-health {
+  color: #397969;
+  background: #e5ffeb;
+}
+
+.home-action-medicine {
+  color: #77191a;
+  background: #ffebe9;
+}
+
+.home-action-copy {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.home-action-copy strong {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 900;
+}
+
+.home-action-copy > span {
+  color: #757575;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.home-action-card > svg:last-child {
+  color: #777;
+  flex: 0 0 auto;
+}
+
+.home-desktop-extras {
+  display: none;
+}
+
+/* ============================= */
+/* NAVEGAÇÃO INFERIOR */
+/* ============================= */
+
+.home-bottom-nav {
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 430px;
+  min-height: 72px;
+  padding:
+    8px 7px
+    max(6px, env(safe-area-inset-bottom));
+  border-top: 1px solid #e5e2d8;
+  background: #fffef9;
+}
+
+.home-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 51px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #777;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.home-nav-link.is-active {
+  color: #397969;
+}
+
+.home-nav-link:hover {
+  background: #edf6ed;
+}
+
+/* ============================= */
+/* BOTÃO SOS FLUTUANTE */
+/* ============================= */
+
+.home-sos-button {
+  position: fixed;
+  z-index: 6;
+  right: max(
+    16px,
+    calc((100vw - 430px) / 2 + 15px)
+  );
+  bottom: 78px;
+  display: flex;
+  width: 83px;
+  height: 83px;
+  align-items: center;
+  justify-content: center;
+  border: 7px solid #ff6365;
+  border-radius: 50%;
+  background: #ff5559;
+
+  box-shadow:
+    0 0 0 3px #fffef9 inset,
+    0 5px 15px rgb(250 49 52 / 44%);
+
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.home-sos-button:hover {
+  background: #e33c43;
+}
+
+/* ============================= */
+/* MODAIS */
+/* ============================= */
+
+.home-dialog-overlay,
+.home-sos-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(13 36 30 / 58%);
+}
+
+.home-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  max-height: min(680px, 90dvh);
+  overflow: auto;
+  border-radius: 22px;
+  padding: 30px 26px 25px;
+  background: #fffff6;
+  box-shadow: 0 18px 60px rgb(0 0 0 / 25%);
+  color: #303030;
+}
+
+.home-dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 11px;
+  background: #edf1eb;
+  color: #397969;
+}
+
+.home-dialog-icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 17px;
+  color: #397969;
+  background: #e5ffeb;
+}
+
+.home-dialog-icon-glicose {
+  background: #e8fcfb;
+  color: #50b4c5;
+}
+
+.home-dialog-icon-pressao {
+  background: #f3eafe;
+  color: #512481;
+}
+
+.home-dialog-icon-batimentos {
+  background: #ffeceb;
+  color: #77191a;
+}
+
+.home-dialog-icon-medicamentos {
+  background: #ffeceb;
+  color: #77191a;
+}
+
+.home-dialog-icon-alertas {
+  background: #fff0c7;
+  color: #a56a00;
+}
+
+.home-dialog h2 {
+  margin: 18px 0 10px;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.home-dialog-text {
+  margin: 12px 0 20px;
+  color: #5f675f;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.home-dialog-value {
+  margin: 12px 0;
+  color: #303030;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.home-dialog-value small {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.home-dialog-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 17px 0 22px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f0f4ec;
+}
+
+.home-dialog-info strong {
+  font-size: 17px;
+}
+
+.home-dialog-info span {
+  font-size: 14px;
+  color: #506259;
+}
+
+.home-dialog-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 9px;
+  background: #397969;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.home-dialog-primary:hover:not(:disabled) {
+  background: #2b6152;
+}
+
+.home-dialog-primary:disabled {
+  opacity: 0.78;
+  cursor: default;
+}
+
+.home-dialog-footnote {
+  margin: 13px 0 0;
+  color: #66736c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.home-dialog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-dialog-list button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 12px;
+  min-height: 54px;
+  border: 1px solid #dae5db;
+  border-radius: 10px;
+  background: white;
+  text-align: left;
+}
+
+.home-dialog-list span {
+  flex: 1;
+}
+
+.home-dialog-list strong {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ============================= */
+/* TELA SOS */
+/* ============================= */
+
+.home-sos-overlay {
+  z-index: 35;
+  padding: 0;
+}
+
+.home-sos-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  min-height: 100dvh;
+  background: #fffff6;
+  padding: 30px 25px;
+}
+
+.home-sos-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: #397969;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.home-sos-center {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 390px;
+  width: 100%;
+  margin: auto;
+}
+
+.home-sos-symbol {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 26px;
+  background: #ffe2e2;
+  color: #df3039;
+}
+
+.home-sos-center h2 {
+  font-size: 29px;
+  font-weight: 900;
+  margin: 24px 0 12px;
+}
+
+.home-sos-center > p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #5a5a5a;
+}
+
+.home-sos-confirm,
+.home-sos-cancel {
+  width: 100%;
+  min-height: 55px;
+  border-radius: 11px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.home-sos-confirm {
+  margin-top: 24px;
+  border: 0;
+  background: #e33439;
+  color: white;
+}
+
+.home-sos-cancel {
+  margin-top: 12px;
+  border: 2px solid #397969;
+  background: transparent;
+  color: #397969;
+}
+
+.home-sos-warning {
+  margin-top: 26px;
+  font-size: 13px !important;
+  line-height: 1.5;
+}
+
+/* ============================= */
+/* DESKTOP — DASHBOARD WEB */
+/* ============================= */
+
+@media (min-width: 900px) {
+
+  .home-screen .home-app {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    min-height: 100dvh;
+  }
+
+  .home-screen .home-main {
+    min-width: 0;
+    background: #f5f7f2;
+  }
+
+  /* MENU LATERAL */
+
+  .home-sidebar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    min-height: 650px;
+    padding: 32px 19px 22px;
+    border-right: 1px solid #e5ebe5;
+    background: #fffef9;
+  }
+
+  .home-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #397969;
+    font-size: 23px;
+    font-weight: 900;
+  }
+
+  .home-sidebar-symbol {
+    display: grid;
+    place-items: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 12px;
+    color: #88e0b9;
+    background: #397969;
+  }
+
+  .home-sidebar-caption {
+    margin: 9px 0 45px 3px;
+    color: #657970;
+    font-size: 12px;
+  }
+
+  .home-sidebar-group-label {
+    margin: 0 12px 14px;
+    color: #88968e;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  .home-side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .home-side-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 52px;
+    border: 0;
+    border-radius: 12px;
+    padding: 0 15px;
+    background: transparent;
+    color: #60716a;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .home-side-link:hover,
+  .home-side-link.is-active {
+    color: #397969;
+    background: #eaf6ee;
+  }
+
+  .home-sidebar-bottom {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid #e7ede5;
+  }
+
+  .home-sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    border: 0;
+    padding: 7px;
+    background: transparent;
+    text-align: left;
+  }
+
+  .home-sidebar-avatar {
+    display: grid;
+    flex: 0 0 42px;
+    place-items: center;
+    height: 42px;
+    border-radius: 50%;
+    background: #5a9c80;
+    color: white;
+    font-size: 21px;
+    font-weight: 900;
+  }
+
+  .home-sidebar-user strong {
+    display: block;
+    font-size: 13px;
+    color: #303030;
+  }
+
+  .home-sidebar-user small {
+    display: block;
+    margin-top: 3px;
+    font-size: 11px;
+    color: #758078;
+  }
+
+  .home-sidebar-logout {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 13px;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    color: #777;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  /* CABEÇALHO DESKTOP */
+
+  .home-hero {
+    height: 282px;
+    padding: 58px clamp(32px, 5vw, 78px);
+  }
+
+  .home-greeting h1 {
+    font-size: clamp(28px, 3vw, 38px);
+  }
+
+  .home-salutation {
+    font-size: 19px;
+  }
+
+  .home-date {
+    font-size: 16px;
+  }
+
+  .home-avatar {
+    display: none;
+  }
+
+  .home-desktop-subtitle {
+    position: absolute;
+    display: block;
+    bottom: 79px;
+    left: clamp(32px, 5vw, 78px);
+    margin: 0;
+    color: #e5f1e9;
+    font-size: 15px;
+  }
+
+  /* CONTEÚDO DESKTOP */
+
+  .home-content {
+    min-height: calc(100dvh - 254px);
+    margin-top: -28px;
+    padding:
+      0 clamp(32px, 5vw, 78px) 70px;
+    background: #f5f7f2;
+    border-radius: 28px 28px 0 0;
+  }
+
+  .home-health-card {
+    top: -46px;
+    max-width: 800px;
+    min-height: 170px;
+    margin-bottom: -46px;
+    padding: 21px 25px 23px;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 9%);
+  }
+
+  .home-card-top h2 {
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+
+  .home-all-measures {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    background: transparent;
+    color: #397969;
+    font-weight: 900;
+    font-size: 13px;
+  }
+
+  .home-vitals {
+    padding: 0;
+    gap: 16px;
+  }
+
+  .home-vital {
+    min-height: 102px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    justify-content: flex-start;
+    padding: 12px 14px;
+    text-align: left;
+  }
+
+  .home-vital-icon {
+    display: flex;
+    align-items: center;
+    height: 26px;
+  }
+
+  .home-vital strong {
+    font-size: 23px;
+  }
+
+  .home-vital small {
+    flex-basis: 100%;
+    font-size: 12px;
+    padding-left: 27px;
+  }
+
+  .home-vital-status {
+    margin-left: 27px;
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+  .home-demo-caption {
+    display: block;
+    margin: 11px 0 0;
+    color: #88928a;
+    font-size: 11px;
+  }
+
+  /* ÁREA DE CARTÕES */
+
+  .home-dashboard-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(340px, 1.1fr)
+      minmax(300px, 0.9fr);
+    gap: 28px;
+    margin-top: 30px;
+  }
+
+  .home-reminder {
+    min-height: 113px;
+  }
+
+  .home-actions {
+    margin-top: 28px;
+  }
+
+  .home-actions h2 {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+
+  .home-action-list {
+    gap: 17px;
+  }
+
+  .home-action-card {
+    min-height: 94px;
+  }
+
+  /* CARDS ADICIONAIS DESKTOP */
+
+  .home-desktop-extras {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home-extra-card {
+    border: 1px solid #e5ebe5;
+    border-radius: 18px;
+    padding: 23px;
+    background: #fffef9;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 4%);
+  }
+
+  .home-extra-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #397969;
+  }
+
+  .home-extra-card h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+    color: #303030;
+  }
+
+  .home-extra-card p {
+    margin: 12px 0 20px;
+    color: #6f7c72;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .home-routine-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 13px 0;
+    border-top: 1px solid #ebeee6;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .home-routine-time {
+    color: #397969;
+    font-weight: 900;
+  }
+
+  .home-routine-pending,
+  .home-routine-done {
+    margin-left: auto;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .home-routine-pending {
+    background: #fff1cf;
+    color: #9c6c13;
+  }
+
+  .home-routine-done {
+    background: #e4f7df;
+    color: #377c36;
+  }
+
+  .home-extra-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    border: 0;
+    background: transparent;
+    color: #397969;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .home-extra-tip {
+    border-color: #e2ede7;
+    background: #ecf6ef;
+  }
+
+  .home-extra-tip p {
+    margin-bottom: 0;
+  }
+
+  /* ESCONDER NAVEGAÇÃO MOBILE */
+
+  .home-bottom-nav {
+    display: none;
+  }
+
+  .home-sos-button {
+    right: 32px;
+    bottom: 30px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .home-sos-page {
+    min-height: auto;
+    height: min(720px, 90dvh);
+    border-radius: 23px;
+    box-shadow:
+      0 20px 60px rgb(0 0 0 / 25%);
+  }
+}
+
+/* ============================= */
+/* NOTEBOOKS */
+/* ============================= */
+
+@media (min-width: 900px) and (max-width: 1180px) {
+
+  .home-screen .home-app {
+    grid-template-columns:
+      216px minmax(0, 1fr);
+  }
+
+  .home-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-desktop-extras {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 359px) {
+
+  .home-hero {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .home-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .home-vitals {
+    gap: 7px;
+    padding: 0 4px;
+  }
+
+  .home-action-card {
+    gap: 11px;
+    padding: 14px 12px;
+  }
+
+  .home-action-copy strong {
+    font-size: 16px;
+  }
+
+  .home-action-copy > span {
+    font-size: 12px;
+  }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .home-vital,
+  .home-action-card {
+    transition: none;
+  }
+}

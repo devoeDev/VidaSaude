@@ -1,0 +1,150 @@
+/* VIDA SAÚDE — SAÚDE, HISTÓRICO E REGISTRO */
+.vs-health-screen { background: #397969; color: #303030; }
+.vs-health-screen button, .vs-health-screen input { font: inherit; }
+.vs-health-screen button { cursor: pointer; }
+.vs-health-screen button:focus-visible, .vs-health-screen input:focus-visible { outline: 3px solid #79c7ab; outline-offset: 3px; }
+.vs-health-layout { min-height: 100svh; }
+.vs-health-main { min-width: 0; min-height: 100svh; background: #fffff6; }
+.vs-side { display: none; }
+
+/* Topo verde */
+.vs-health-header { position: relative; min-height: 207px; background: #397969; color: #fff; padding: 48px 20px 77px; }
+.vs-health-header h1 { margin: 0; font-size: 27px; line-height: 1.2; font-weight: 900; }
+.vs-health-header p { margin: 3px 0 0; font-size: 15px; font-weight: 700; color: #d8ebe3; }
+.vs-back { display: flex; align-items: center; gap: 3px; width: fit-content; min-height: 32px; padding: 0; margin: -28px 0 16px; color: #fff; background: none; border: 0; font-weight: 800; font-size: 14px; }
+
+/* Área clara */
+.vs-health-content { position: relative; min-height: calc(100svh - 207px); margin-top: -1px; border-radius: 18px 18px 0 0; padding: 0 18px 106px; background: #fffff6; }
+.vs-overview-inner { max-width: 780px; margin: 0 auto; }
+.vs-measure-list { display: flex; flex-direction: column; gap: 26px; padding-top: 1px; }
+.vs-measure-card { width: 100%; min-height: 102px; display: flex; align-items: center; gap: 13px; padding: 14px 19px; border: 1px solid #f0efe9; border-radius: 19px; background: #fffef9; color: #303030; text-align: left; box-shadow: 0 3px 5px #0003; transition: transform .14s ease, box-shadow .14s ease; }
+.vs-measure-card:hover { transform: translateY(-2px); box-shadow: 0 7px 16px #0002; }
+.vs-measure-card:first-child { margin-top: -65px; }
+.vs-measure-icon { flex: 0 0 56px; height: 56px; display: grid; place-items: center; border-radius: 17px; }
+.vs-color-glicose { background: #e6fbfa; color: #50b4c5; }
+.vs-color-pressao { background: #f2eafd; color: #542681; }
+.vs-color-batimentos { background: #ffeceb; color: #77191a; }
+.vs-measure-copy { min-width: 0; flex: 1; display: flex; flex-direction: column; }
+.vs-measure-name { font-size: 14px; font-weight: 900; color: #4b4b4b; }
+.vs-measure-reading { display: flex; align-items: baseline; gap: 5px; }
+.vs-measure-reading strong { font-size: 27px; font-weight: 900; line-height: 1.1; letter-spacing: -.5px; }
+.vs-measure-reading small { font-size: 13px; color: #777; font-weight: 800; }
+.vs-measure-card > svg:last-child { flex: 0 0 auto; color: #777; }
+.vs-status { display: inline-flex; align-self: flex-start; align-items: center; min-height: 15px; padding: 1px 7px; border-radius: 7px; font-size: 10px; font-weight: 900; line-height: 1.25; white-space: nowrap; }
+.vs-status-normal { background: #d9faba; color: #348a1f; }
+.vs-status-atenção, .vs-status-elevada { background: #fff0bf; color: #972f15; }
+.vs-overview-actions { display: flex; flex-direction: column; gap: 27px; margin: 28px 6px 0; }
+.vs-primary-btn, .vs-outline-btn { min-height: 47px; width: 100%; border-radius: 8px; font-size: 17px !important; font-weight: 900 !important; display: flex; justify-content: center; align-items: center; gap: 8px; padding: 10px 12px; }
+.vs-primary-btn { color: #fff; background: #397969; border: 2px solid #397969; }
+.vs-primary-btn:hover { background: #2b6152; }
+.vs-outline-btn { color: #397969; border: 2px solid #397969; background: transparent; }
+.vs-outline-btn:hover { background: #edf7ef; }
+
+/* Barra inferior */
+.vs-bottom { position: fixed; z-index: 15; bottom: 0; left: 50%; transform: translateX(-50%); max-width: 430px; width: 100%; min-height: 69px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid #deded9; background: #fffef9; padding: 7px 8px max(5px, env(safe-area-inset-bottom)); }
+.vs-bottom button { display: flex; flex-direction: column; gap: 3px; align-items: center; justify-content: center; min-height: 54px; border: 0; border-radius: 10px; color: #7a7a7a; background: transparent; font-size: 13px; font-weight: 900; }
+.vs-bottom button.vs-selected { color: #397969; }
+.vs-bottom button:hover { background: #eff7ef; }
+
+/* Abas do histórico/cadastro */
+.vs-tabs { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; align-items: center; margin: -48px 6px 30px; min-height: 57px; padding: 5px; border-radius: 17px; background: #fffefa; box-shadow: 0 4px 6px #0003; }
+.vs-tabs button { display: flex; justify-content: center; align-items: center; min-height: 46px; padding: 8px 6px; border: 0; border-radius: 16px; color: #454545; background: transparent; font-size: 16px; font-weight: 900; }
+.vs-tabs button.vs-tab-active { color: #fff; background: #397969; box-shadow: 0 3px 5px #0003; }
+.vs-history-inner, .vs-register-inner { margin: 0 auto; max-width: 820px; }
+.vs-chart-card, .vs-records, .vs-input-card { border: 1px solid #f0eee7; border-radius: 19px; background: #fffef9; box-shadow: 0 3px 5px #0003; }
+.vs-chart-card { padding: 18px 12px 20px; min-height: 240px; }
+.vs-chart-card h2, .vs-records h2, .vs-input-card h2 { margin: 0; font-size: 19px; line-height: 1.25; font-weight: 900; }
+.vs-chart-card h2 { margin-left: 12px; }
+.vs-chart-card h2 small, .vs-input-card h2 small { color: #7d7d7d; font-size: 13px; font-weight: 800; }
+.vs-chart { display: block; width: 100%; height: auto; margin-top: 13px; overflow: visible; }
+.vs-chart-note { margin: 3px 12px 0; color: #777; font-size: 12px; }
+.vs-records { margin-top: 46px; padding: 20px 15px 18px; }
+.vs-records h2 { margin: 0 0 15px 6px; }
+.vs-record-row { display: flex; align-items: center; gap: 9px; min-height: 73px; padding: 10px 6px; border-bottom: 2px solid #e8e8e8; }
+.vs-record-row:last-child { border-bottom: 0; }
+.vs-record-date { display: flex; flex: 0 0 28%; flex-direction: column; font-size: 15px; line-height: 1.1; }
+.vs-record-date strong { font-weight: 900; }
+.vs-record-date small { color: #777; font-size: 14px; font-weight: 800; }
+.vs-record-value { min-width: 0; flex: 1; display: flex; align-items: baseline; gap: 4px; }
+.vs-record-value strong { font-size: 25px; line-height: 1.1; letter-spacing: -.5px; font-weight: 900; }
+.vs-record-value small { font-size: 12px; font-weight: 800; color: #7e7e7e; }
+.vs-record-row > .vs-status { flex: 0 0 auto; align-self: center; }
+.vs-history-add { margin: 26px 0 0; }
+.vs-success { display: flex; align-items: center; gap: 8px; border-radius: 10px; background: #e2f4e5; color: #25634a; padding: 13px; margin-bottom: 18px; font-weight: 900; }
+
+/* Registrar medição */
+.vs-input-card { padding: 22px 23px 28px; }
+.vs-input-card h2 { margin: 0 0 25px; }
+.vs-main-input, .vs-pressure-inputs label { display: flex; flex-direction: column; gap: 6px; color: #303030; font-size: 16px; font-weight: 900; }
+.vs-main-input input, .vs-pressure-inputs input { width: 100%; height: 48px; border-radius: 9px; border: 1px solid #c8cbc2; background: #f6f6ec; color: #303030; padding: 0 14px; font-size: 17px; outline: none; }
+.vs-pressure-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.vs-recorded-now { display: flex; align-items: center; gap: 12px; margin-top: 37px; padding: 9px 12px; min-height: 49px; border: 1px solid #c8cbc2; border-radius: 10px; background: #f6f6ec; color: #555; }
+.vs-recorded-now span { display: flex; flex-direction: column; }
+.vs-recorded-now strong { font-size: 13px; color: #303030; line-height: 1.2; }
+.vs-recorded-now small { font-size: 12px; font-weight: 700; color: #777; }
+.vs-field-error { margin: 15px 0 0; color: #ab3333; font-size: 13px; font-weight: 800; }
+.vs-form-actions { display: flex; flex-direction: column; gap: 25px; margin: 43px 6px 0; }
+.vs-demo-disclaimer { max-width: 760px; margin: 30px auto 0; color: #808780; font-size: 11px; line-height: 1.4; text-align: center; }
+
+/* Computador: sistema web, sem moldura de celular */
+@media (min-width: 900px) {
+  .vs-health-screen.app-shell { max-width: none; width: 100%; height: auto; min-height: 100dvh; border: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+  .vs-health-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); min-height: 100dvh; }
+  .vs-side { position: sticky; top: 0; display: flex; flex-direction: column; height: 100dvh; padding: 32px 19px; background: #fffef9; border-right: 1px solid #e4ebe5; }
+  .vs-side-brand { display: flex; align-items: center; gap: 11px; font-size: 23px; font-weight: 900; color: #397969; }
+  .vs-side-logo { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: #397969; color: #88e0b9; }
+  .vs-side > p { font-size: 12px; color: #657970; margin: 11px 0 43px 3px; }
+  .vs-side-label { font-size: 11px; color: #88968e; font-weight: 900; letter-spacing: 1px; margin: 0 12px 14px; }
+  .vs-side-links { display: flex; flex-direction: column; gap: 6px; }
+  .vs-side-links button { min-height: 52px; display: flex; align-items: center; gap: 13px; background: transparent; border: 0; border-radius: 12px; padding: 0 15px; color: #60716a; font-size: 15px; font-weight: 900; text-align: left; }
+  .vs-side-links button.vs-selected, .vs-side-links button:hover { background: #eaf6ee; color: #397969; }
+  .vs-bottom { display: none; }
+  .vs-health-main { background: #f5f7f2; }
+  .vs-health-header { min-height: 266px; padding: 65px clamp(35px, 6vw, 90px) 90px; }
+  .vs-health-header h1 { font-size: 37px; }
+  .vs-health-header p { margin-top: 7px; font-size: 17px; }
+  .vs-back { margin: -24px 0 17px; }
+  .vs-health-content { min-height: calc(100dvh - 240px); margin-top: -26px; padding: 0 clamp(35px, 6vw, 90px) 65px; border-radius: 25px 25px 0 0; background: #f5f7f2; }
+  .vs-overview-inner { max-width: 1100px; }
+  .vs-measure-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .vs-measure-card { padding: 20px 17px; min-height: 145px; gap: 12px; box-shadow: 0 5px 18px #0001; }
+  .vs-measure-card:first-child { margin-top: -45px; }
+  .vs-measure-card:not(:first-child) { margin-top: -45px; }
+  .vs-measure-icon { flex-basis: 55px; }
+  .vs-measure-reading strong { font-size: 25px; }
+  .vs-measure-reading { flex-wrap: wrap; }
+  .vs-overview-actions { margin: 35px 0 0; flex-direction: row; justify-content: flex-start; }
+  .vs-overview-actions > button { width: auto; min-width: 255px; }
+  .vs-tabs { max-width: 550px; margin: -51px 0 35px; }
+  .vs-history-inner { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 26px; max-width: 1200px; align-items: start; }
+  .vs-success { grid-column: 1 / -1; }
+  .vs-chart-card { min-height: 335px; padding: 24px; box-shadow: 0 5px 18px #0001; }
+  .vs-records { margin: 0; min-height: 335px; padding: 24px 20px; box-shadow: 0 5px 18px #0001; }
+  .vs-history-add { grid-column: 1 / -1; max-width: 310px; margin-top: 0; }
+  .vs-register-inner { width: 100%; max-width: 720px; margin: 0; }
+  .vs-input-card { padding: 30px; box-shadow: 0 5px 18px #0001; }
+  .vs-form-actions { flex-direction: row; gap: 15px; margin: 28px 0 0; }
+  .vs-demo-disclaimer { margin: 25px 0 0; text-align: left; }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .vs-health-layout { grid-template-columns: 210px minmax(0, 1fr); }
+  .vs-measure-list { grid-template-columns: 1fr; gap: 16px; }
+  .vs-measure-card { min-height: 110px; }
+  .vs-measure-card:not(:first-child) { margin-top: 0; }
+  .vs-history-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 355px) {
+  .vs-health-content { padding-left: 12px; padding-right: 12px; }
+  .vs-measure-card { padding: 12px; gap: 9px; }
+  .vs-measure-icon { flex-basis: 50px; height: 50px; }
+  .vs-measure-reading strong { font-size: 24px; }
+  .vs-record-value strong { font-size: 22px; }
+  .vs-record-row > .vs-status { padding: 1px 4px; font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) { .vs-measure-card { transition: none; } }
+
+/* A tela de registro tem cabeçalho mais alto conforme o Figma. */
+.vs-header-register { min-height: 268px; padding-top: 113px; }
+.vs-header-register .vs-back { position: absolute; left: 20px; top: 30px; margin: 0; }
+.vs-registrar .vs-tabs { margin-top: -67px; }
+@media (min-width: 900px) { .vs-header-register { min-height: 266px; padding-top: 65px; } .vs-header-register .vs-back { left: clamp(35px, 6vw, 90px); top: 25px; } .vs-registrar .vs-tabs { margin-top: -51px; } }
